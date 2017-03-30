@@ -13,7 +13,7 @@
  */
 declare(strict_types=1);
 
-namespace :project_name\Client;
+namespace :project_name\Client\QueryString;
 
 /**
  * Manange extra query string options like Limit, Offset and Sort
