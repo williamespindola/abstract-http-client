@@ -68,6 +68,8 @@ abstract class AbstractRequest
      * Get URI concatenating base url api with resource end point
      *
      * @return string URI end point
+     *
+     * @throws Exception If AbstractRequest::baseUrl or AbstractRequest::uri was empty
      */
     protected function getURI(): string
     {
@@ -89,6 +91,9 @@ abstract class AbstractRequest
      *  ]);
      * </code>
      *
+     * @throws InvalidArgumentException If parameters param was empty
+     * @throws Exception                If parametes not match with request endPoint
+     *
      * @return void
      */
     protected function setParameters(array $parameters): void
@@ -100,7 +105,15 @@ abstract class AbstractRequest
         $this->uri = null;
 
         foreach ($parameters as $key => $param) {
-            $this->uri = str_replace($key, $param, $this->endPoint);
+            if (preg_match("/{$key}/i", $this->endPoint)) {
+                $this->uri = str_replace($key, $param, $this->endPoint);
+            }
+        }
+
+        if (empty($this->uri)) {
+            throw new Exception(
+                'Parameters definition not matches with request end point'
+            );
         }
     }
 }
