@@ -5,27 +5,28 @@
  * PHP version 7
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      :project_url
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 declare(strict_types=1);
 
-namespace :project_name\Client;
+namespace WilliamEspindola\AbstractHTTPClient;
 
 use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Response;
 
 /**
  * Implements GuzzleHttp Client
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      :project_url
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 class GuzzleClient implements HTTPClient
 {
@@ -55,9 +56,9 @@ class GuzzleClient implements HTTPClient
      * @param string $method GET|PUT|POST|DELETE
      * @param string $url    Url
      *
-     * @return string Body response
+     * @return string Body GuzzleHttp\Psr7\Response
      */
-    public function request(string $method, string $url)
+    public function request(string $method, string $url): Response
     {
         return $this->httpClient->request($method, $url, $this->options);
     }
@@ -69,7 +70,7 @@ class GuzzleClient implements HTTPClient
      *
      * @return void
      */
-    public function setOptions(array $optionParams)
+    public function setOptions(array $optionParams): void
     {
         $this->options = $optionParams;
     }

@@ -1,31 +1,32 @@
 <?php
+<?php
 /**
  * This file is part of :project_name
  *
  * PHP version 7
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      :project_url
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 declare(strict_types=1);
 
-namespace ArizonaTecnologia\PimSdk\Client;
+namespace WilliamEspindola\AbstractHTTPClient;
+
+use GuzzleHttp\Psr7\Response;
 
 /**
- * Abstracts http clients implementation
- *
  * Implements GuzzleHttp Client
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      :project_url
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 interface HTTPClient
 {
@@ -37,7 +38,7 @@ interface HTTPClient
      *
      * @return string Body response
      */
-    public function request(string $method, string $url);
+    public function request(string $method, string $url): Response
 
     /**
      * Set request options
@@ -46,5 +47,5 @@ interface HTTPClient
      *
      * @return void
      */
-    public function setOptions(array $optionParams);
+    public function setOptions(array $optionParams): void;
 }

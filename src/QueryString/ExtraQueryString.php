@@ -5,26 +5,26 @@
  * PHP version 7
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      :project_url
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 declare(strict_types=1);
 
-namespace :project_name\Client\QueryString;
+namespace WilliamEspindola\AbstractHTTPClient\QueryString;
 
 /**
  * Manange extra query string options like Limit, Offset and Sort
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
  * @version   Release: 0.0.0
- * @link      :project_url
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 trait ExtraQueryString
 {
@@ -40,7 +40,7 @@ trait ExtraQueryString
      *
      * @return void
      */
-    public function setLimit(int $number)
+    public function setLimit(int $number): void
     {
         $this->queryString[] = 'limit=' . $number;
     }
@@ -52,7 +52,7 @@ trait ExtraQueryString
      *
      * @return void
      */
-    public function setOffset(int $offset)
+    public function setOffset(int $offset): void
     {
         $this->queryString[] = 'offset=' . $offset;
     }
@@ -64,7 +64,7 @@ trait ExtraQueryString
      *
      * @return void
      */
-    public function setSort(array $sort)
+    public function setSort(array $sort): void
     {
         if (count($sort) == 1) {
             $sort = $sort[0];
@@ -84,7 +84,7 @@ trait ExtraQueryString
      *
      * @return String Uri concatenated with extra query string
      */
-    public function getUriWithExtraString(string $uri)
+    public function getUriWithExtraString(string $uri): String
     {
         if (!$this->queryString) {
             return $uri;

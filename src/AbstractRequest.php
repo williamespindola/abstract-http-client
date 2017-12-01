@@ -5,29 +5,29 @@
  * PHP version 7
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      :project_url
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 declare(strict_types=1);
 
-namespace :project_name\Client;
+namespace WilliamEspindola\AbstractHTTPClient;
 
-use InvalidArgumentException;
 use Exception;
+use InvalidArgumentException;
 
 /**
  * Abstracts request resources
  *
  * @category  PHP
- * @package   :project_name\Client
+ * @package   WilliamEspindola\AbstractHTTPClient
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @version   Release: 0.0.0
- * @link      :project_url
+ * @version   Release: 1.0.0
+ * @link      https://github.com/williamespindola/abstract-http-client-guzzle
  */
 abstract class AbstractRequest
 {
@@ -47,6 +47,11 @@ abstract class AbstractRequest
     protected $baseUrl;
 
     /**
+     * @var string $uri String that identifies resource
+     */
+    private $uri;
+
+    /**
      * Initializes new AbstractNuxeoIntegration
      *
      * @param HTTPClient $httpClient HTTP Client implementation
@@ -64,13 +69,13 @@ abstract class AbstractRequest
      *
      * @return string URI end point
      */
-    protected function getURI()
+    protected function getURI(): string
     {
-        if (empty($this->url) || empty($this->endPoint)) {
+        if (empty($this->baseUrl) || empty($this->uri)) {
             throw new Exception('Url or end point can not be null');
         }
 
-        return $this->url . $this->endPoint;
+        return $this->baseUrl . $this->uri;
     }
 
     /**
@@ -83,15 +88,19 @@ abstract class AbstractRequest
      *      ':paramkey' => 'my param value'
      *  ]);
      * </code>
+     *
+     * @return void
      */
-    protected function setParameters(array $parameters)
+    protected function setParameters(array $parameters): void
     {
         if (empty($parameters)) {
             throw new InvalidArgumentException('Parameters can not be null');
         }
 
+        $this->uri = null;
+
         foreach ($parameters as $key => $param) {
-            $this->endPoint = str_replace($key, $param, $this->endPoint);
+            $this->uri = str_replace($key, $param, $this->endPoint);
         }
     }
 }
