@@ -21,10 +21,8 @@ $ composer require williamespindola/abstract-http-client-guzzle
 
 extend
 ```php
-namespace :project_name
-
 ...
-use :project_name\Client\AbstractRequest;
+use WilliamEspindola\AbstractHTTPClient\AbstractRequest;
 use GuzzleHttp\Psr7\Response;
 ...
 
@@ -49,8 +47,8 @@ final class MyRequest extends AbstractRequest
 Instance
 ```php
 use GuzzleHttp\Client;
-use :project_name\MyRequest;
-use :project_name\Client\GuzzleClient;
+use WilliamEspindola\AbstractHTTPClient\MyRequest;
+use WilliamEspindola\AbstractHTTPClient\Client\GuzzleClient;
 
 $instance = new MyRequest(new GuzzleClient(new Client), 'http://url');
 ```
@@ -58,11 +56,11 @@ $instance = new MyRequest(new GuzzleClient(new Client), 'http://url');
 Using extra query string
 
 ```php
-namespace :project_name
+namespace WilliamEspindola\AbstractHTTPClient
 
 ...
-use :project_name\Client\AbstractRequest;
-use :project_name\Client\QueryString\ExtraQueryString;
+use WilliamEspindola\AbstractHTTPClient\Client\AbstractRequest;
+use WilliamEspindola\AbstractHTTPClient\Client\QueryString\ExtraQueryString;
 use GuzzleHttp\Psr7\Response;
 ...
 
