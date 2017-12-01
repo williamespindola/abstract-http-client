@@ -31,9 +31,9 @@ use GuzzleHttp\Psr7\Response;
 class GuzzleClient implements HTTPClient
 {
     /**
-     * @var GuzzleHttp\Client $httpClient Guzzle instance
+     * @var GuzzleHttp\Client $client Guzzle instance
      */
-    private $httpClient;
+    private $client;
 
     /**
      * @var array $options Request options
@@ -43,13 +43,11 @@ class GuzzleClient implements HTTPClient
     /**
      * Initializes GuzzleClient
      *
-     * @param Client $httpClient
-     *
-     * @return void
+     * @param Client $client
      */
-    public function __construct(Client $httpClient)
+    public function __construct(Client $client)
     {
-        $this->httpClient = $httpClient;
+        $this->client = $client;
     }
 
     /**
@@ -62,7 +60,7 @@ class GuzzleClient implements HTTPClient
      */
     public function request(string $method, string $url): Response
     {
-        return $this->httpClient->request($method, $url, $this->options);
+        return $this->client->request($method, $url, $this->options);
     }
 
     /**
