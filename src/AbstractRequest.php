@@ -97,7 +97,7 @@ abstract class AbstractRequest
      *
      * @return void
      */
-    protected function setParameters(array $parameters): void
+    protected function setParameters(array $parameters)
     {
         if (empty($parameters)) {
             throw new InvalidArgumentException('Parameters can not be null');
