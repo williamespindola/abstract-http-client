@@ -46,5 +46,5 @@ interface HTTPClient
      *
      * @return void
      */
-    public function setOptions(array $optionParams): void;
+    public function setOptions(array $optionParams);
 }

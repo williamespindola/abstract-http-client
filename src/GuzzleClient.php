@@ -70,7 +70,7 @@ class GuzzleClient implements HTTPClient
      *
      * @return void
      */
-    public function setOptions(array $optionParams): void
+    public function setOptions(array $optionParams)
     {
         $this->options = $optionParams;
     }

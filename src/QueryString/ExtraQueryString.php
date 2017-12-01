@@ -40,7 +40,7 @@ trait ExtraQueryString
      *
      * @return void
      */
-    public function setLimit(int $number): void
+    public function setLimit(int $number)
     {
         $this->queryString[] = 'limit=' . $number;
     }
@@ -52,7 +52,7 @@ trait ExtraQueryString
      *
      * @return void
      */
-    public function setOffset(int $offset): void
+    public function setOffset(int $offset)
     {
         $this->queryString[] = 'offset=' . $offset;
     }
@@ -64,7 +64,7 @@ trait ExtraQueryString
      *
      * @return void
      */
-    public function setSort(array $sort): void
+    public function setSort(array $sort)
     {
         if (count($sort) == 1) {
             $sort = $sort[0];
