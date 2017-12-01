@@ -9,7 +9,7 @@
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      https://github.com/williamespindola/abstract-http-client-guzzle
+ * @link      https://github.com/williamespindola/abstract-http-client
  */
 declare(strict_types=1);
 
@@ -25,7 +25,7 @@ use GuzzleHttp\Psr7\Response;
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      https://github.com/williamespindola/abstract-http-client-guzzle
+ * @link      https://github.com/williamespindola/abstract-http-client
  */
 interface HTTPClient
 {

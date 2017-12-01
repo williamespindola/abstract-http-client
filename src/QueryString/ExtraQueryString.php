@@ -9,7 +9,7 @@
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      https://github.com/williamespindola/abstract-http-client-guzzle
+ * @link      https://github.com/williamespindola/abstract-http-client
  */
 declare(strict_types=1);
 
@@ -24,7 +24,7 @@ namespace WilliamEspindola\AbstractHTTPClient\QueryString;
  * @copyright Free
  * @license   MIT
  * @version   Release: 0.0.0
- * @link      https://github.com/williamespindola/abstract-http-client-guzzle
+ * @link      https://github.com/williamespindola/abstract-http-client
  */
 trait ExtraQueryString
 {

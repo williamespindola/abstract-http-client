@@ -1,4 +1,4 @@
-# abstract-http-client-guzzle
+# abstract-http-client
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -7,14 +7,15 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Abstract http client with guzzle
+Abstract http client for:
+- guzzle
 
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require williamespindola/abstract-http-client-guzzle
+$ composer require williamespindola/abstract-http-client
 ```
 
 ## Usage
@@ -115,17 +116,17 @@ If you discover any security related issues, please email oi@williamespindola.co
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/williamespindola/abstract-http-client-guzzle.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/williamespindola/abstract-http-client.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/williamespindola/abstract-http-client-guzzle/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/williamespindola/abstract-http-client-guzzle.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/williamespindola/abstract-http-client-guzzle.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/williamespindola/abstract-http-client-guzzle.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/williamespindola/abstract-http-client/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/williamespindola/abstract-http-client.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/williamespindola/abstract-http-client.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/williamespindola/abstract-http-client.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/williamespindola/abstract-http-client-guzzle
-[link-travis]: https://travis-ci.org/williamespindola/abstract-http-client-guzzle
-[link-scrutinizer]: https://scrutinizer-ci.com/g/williamespindola/abstract-http-client-guzzle/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/williamespindola/abstract-http-client-guzzle
-[link-downloads]: https://packagist.org/packages/williamespindola/abstract-http-client-guzzle
+[link-packagist]: https://packagist.org/packages/williamespindola/abstract-http-client
+[link-travis]: https://travis-ci.org/williamespindola/abstract-http-client
+[link-scrutinizer]: https://scrutinizer-ci.com/g/williamespindola/abstract-http-client/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/williamespindola/abstract-http-client
+[link-downloads]: https://packagist.org/packages/williamespindola/abstract-http-client
 [link-author]: https://github.com/williamespindola
 [link-contributors]: ../../contributors

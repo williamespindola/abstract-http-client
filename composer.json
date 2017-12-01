@@ -1,12 +1,12 @@
 {
-    "name": "williamespindola/abstract-http-client-guzzle",
+    "name": "williamespindola/abstract-http-client",
     "type": "library",
     "description": "Abstract http client with guzzle",
     "keywords": [
         "williamespindola",
-        "abstract-http-client-guzzle"
+        "abstract-http-client"
     ],
-    "homepage": "https://github.com/williamespindola/abstract-http-client-guzzle",
+    "homepage": "https://github.com/williamespindola/abstract-http-client",
     "license": "MIT",
     "authors": [
         {

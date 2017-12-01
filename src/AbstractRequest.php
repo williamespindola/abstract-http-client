@@ -9,7 +9,7 @@
  * @author    William Espindola <oi@williamespindola.com.br>
  * @copyright Free
  * @license   MIT
- * @link      https://github.com/williamespindola/abstract-http-client-guzzle
+ * @link      https://github.com/williamespindola/abstract-http-client
  */
 declare(strict_types=1);
 
@@ -28,7 +28,7 @@ use WilliamEspindola\AbstractHTTPClient\HTTPClient;
  * @copyright Free
  * @license   MIT
  * @version   Release: 1.0.0
- * @link      https://github.com/williamespindola/abstract-http-client-guzzle
+ * @link      https://github.com/williamespindola/abstract-http-client
  */
 abstract class AbstractRequest
 {
