@@ -1,5 +1,4 @@
 <?php
-<?php
 /**
  * This file is part of :project_name
  *
@@ -38,7 +37,7 @@ interface HTTPClient
      *
      * @return string Body response
      */
-    public function request(string $method, string $url): Response
+    public function request(string $method, string $url): Response;
 
     /**
      * Set request options

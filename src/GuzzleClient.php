@@ -43,6 +43,8 @@ class GuzzleClient implements HTTPClient
     /**
      * Initializes GuzzleClient
      *
+     * @param Client $httpClient
+     *
      * @return void
      */
     public function __construct(Client $httpClient)
