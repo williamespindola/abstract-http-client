@@ -17,7 +17,7 @@ final class MyRequest extends AbstractRequest
     {
         $this->setParameters([':id' => $id]);
 
-        return $this->httpClient->request('GET', $this->getURI());
+        return $this->client->request('GET', $this->getURI());
     }
 }
 

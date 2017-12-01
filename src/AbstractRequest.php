@@ -17,6 +17,7 @@ namespace WilliamEspindola\AbstractHTTPClient;
 
 use Exception;
 use InvalidArgumentException;
+use WilliamEspindola\AbstractHTTPClient\HTTPClient;
 
 /**
  * Abstracts request resources
@@ -37,9 +38,9 @@ abstract class AbstractRequest
     protected $config;
 
     /**
-     * @var Client $httpClient Cliente implementation
+     * @var Client $client Cliente implementation
      */
-    protected $httpClient;
+    protected $client;
 
     /**
      * @var string $baseUrl Base API URL
@@ -54,14 +55,14 @@ abstract class AbstractRequest
     /**
      * Initializes new AbstractNuxeoIntegration
      *
-     * @param HTTPClient $httpClient HTTP Client implementation
+     * @param HTTPClient $client HTTPClient implementation
      * @param string     $baseUrl    Base API URL
      */
-    public function __construct(HTTPClient $httpClient, string $baseUrl)
+    public function __construct(HTTPClient $client, string $baseUrl)
     {
         $this->baseUrl = $baseUrl;
 
-        $this->httpClient = $httpClient;
+        $this->client = $client;
     }
 
     /**
