@@ -72,6 +72,6 @@ class GuzzleClient implements HTTPClient
      */
     public function setOptions(array $optionParams)
     {
-        $this->options = $optionParams;
+        $this->options = array_merge_recursive($this->options, $optionParams);
     }
 }
