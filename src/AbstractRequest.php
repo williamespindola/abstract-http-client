@@ -107,7 +107,11 @@ abstract class AbstractRequest
 
         foreach ($parameters as $key => $param) {
             if (preg_match("/{$key}/i", $this->endPoint)) {
-                $this->uri = str_replace($key, $param, $this->endPoint);
+                if (is_null($this->uri)) {
+                    $this->uri = $this->endPoint;
+                }
+
+                $this->uri = str_replace($key, $param, $this->uri);
             }
         }
 
